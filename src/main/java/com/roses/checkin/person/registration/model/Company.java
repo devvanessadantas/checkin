@@ -1,4 +1,13 @@
 package com.roses.checkin.person.registration.model;
 
-public class Company {
+import jakarta.persistence.*;
+import lombok.Data;
+
+import java.util.UUID;
+
+@Data
+@Table(name = "company")
+@Entity
+public class Company extends Person{
+
 }
