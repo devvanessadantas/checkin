@@ -1,9 +1,16 @@
 package com.roses.checkin.person.registration.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
-public class Customer {
+import java.time.LocalDate;
 
-    private Person person;
+@Data
+@Entity
+@Table(name = "customer")
+public class Customer extends Person{
+
+    @Temporal(TemporalType.DATE)
+    private LocalDate birthday;
+
 }
