@@ -21,5 +21,7 @@ public class Phone {
 
     private String number;
 
-
+    @ManyToOne
+    @JoinColumn(name = "id_person")
+    private Person person;
 }

@@ -23,14 +23,15 @@ public class Person {
 
     private String email;
 
-//    private List<Phone> phones;
+    @OneToMany(mappedBy = "person")
+    private List<Phone> phones;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_address")
-//    private Address address;
-//
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_document")
-//    private Document document;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_address")
+    private Address address;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_document")
+    private Document document;
 
 }
