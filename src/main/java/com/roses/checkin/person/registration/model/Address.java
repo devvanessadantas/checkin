@@ -29,8 +29,5 @@ public class Address {
 
     private String country;
 
-    @OneToOne
-    @JoinColumn(name = "id_person")
-    private Person person;
 
 }

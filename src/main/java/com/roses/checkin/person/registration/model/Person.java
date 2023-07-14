@@ -8,9 +8,11 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "person")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Person {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,17 +21,16 @@ public class Person {
 
     private String name;
 
-    @OneToMany(mappedBy="person")
-    private List<Phone> phones;
-
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_address", referencedColumnName = "id_person")
-    private Address address;
+//    private List<Phone> phones;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_document", referencedColumnName = "id_person")
-    private Document document;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "id_address")
+//    private Address address;
+//
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "id_document")
+//    private Document document;
 
 }

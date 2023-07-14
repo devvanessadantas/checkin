@@ -19,7 +19,4 @@ public class Document {
 
     private String number;
 
-    @OneToOne
-    @JoinColumn(name = "id_person")
-    private Person person;
 }

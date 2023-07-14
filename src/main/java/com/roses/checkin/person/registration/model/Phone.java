@@ -21,7 +21,5 @@ public class Phone {
 
     private String number;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "id_pessoa")
-    private Person person;
+
 }
